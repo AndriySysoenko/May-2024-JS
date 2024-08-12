@@ -6,9 +6,65 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .product-card{
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            background: #f6f6f6;
+        }
+        .product-card>img{
+            width: 200px;
+            height: 200px;
+        }
+        .product-title{
+            text-transform: capitalize;
+        }
+    </style>
 </head>
 <body>
 
 <script src = "main.js"></script>
+<script>
+    let products = [
+        {
+            title: 'milk',
+            price: 22,
+            image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+        },
+        {
+            title: 'juice',
+            price: 27,
+            image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+        },
+        {
+            title: 'tomato',
+            price: 47,
+            image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+        },
+        {
+            title: 'tea',
+            price: 15,
+            // image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+        },
+    ];
+    for (const card of products) {
+        document.write(`<div class="product-card">
+        <h3 class="product-title">${card.title}. Price - ${card.price}</h3>
+        <img src="${card.image}" alt="${card.title}" class="product-image">
+    </div>`)
+    }
+</script>
 </body>
 </html>
