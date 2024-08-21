@@ -190,3 +190,15 @@ let changeArr =  [23, false, 34, 42, 45, true, 'home'];
 changeArr.typeForEach (value => console.log(value))
 console.log (changeArr)
 
+Array.prototype.oderFilter = function (callback){
+    const buyer = [];
+    for (const unit of this) {
+        if(callback(unit) <= 2) {
+            buyer.push(unit);
+        }
+    }
+    return buyer
+    }
+
+let badBuyer = clients.oderFilter(value => value.order.length);
+console.log(badBuyer)
