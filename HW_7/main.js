@@ -178,3 +178,14 @@ console.log(bride);
 
 let brideFind = cinderellas.find(value => value.footSize === groom.shoesSize);
 console.log(brideFind);
+
+//___________________________________*Через Array.prototype. створити власний foreach, filter________________________//
+Array.prototype.indexForEach = function (callback){
+    for (let item of this) {
+        callback (item.toString());
+    }
+}
+
+let changeArr =  [23, false, 34, 42, 45, true, 'home'];
+changeArr.indexForEach (value => console.log(value))
+console.log (changeArr)
