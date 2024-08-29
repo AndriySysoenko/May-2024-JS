@@ -36,3 +36,26 @@ allInfo.addEventListener('submit', function (event) {
 
 })
 
+//____________________________написати код, який при кожному перезавантажені сторінки буде додавати до неї +1____________________//
+let counterLoad = +localStorage.getItem('counter');
+counterLoad +=1;
+localStorage.setItem('counter', counterLoad)
+
+let blockLoad = document.getElementsByTagName('span')[0];
+blockLoad.innerText = counterLoad;
+
+//_________при відвідуванні якої потрібно відмалювати всю інформацію про відвідування сторінки index.html__________________//
+let sessionsList = [];
+if (localStorage.getItem('sessionsList')) {
+    sessionsList = JSON.parse(localStorage.getItem('sessionsList'));
+}
+sessionsList.push(new Date());
+localStorage.setItem('sessionsList', JSON.stringify(sessionsList));
+
+//_________________створити конвертор ваги з кг в фунти. данні заповнюються через інпут._________________________//
+let enterKilo = document.getElementById('change');
+let totalConvert = document.getElementById('total');
+
+enterKilo.oninput = function(){
+    totalConvert.innerText = this.value * 2.2;
+}

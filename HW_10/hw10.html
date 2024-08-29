@@ -22,6 +22,19 @@
             height: 25px;
             margin-top: 30px;
         }
+        #countReload {
+            width: 200px;
+            height: 200px;
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #total{
+            width: 200px;
+            height: 30px;
+            background: none;
+        }
 
     </style>
 </head>
@@ -41,7 +54,12 @@
     <button>save</button>
 </form>
 
+<div id="countReload">
+    <span></span>
+</div>
 
+<input id = "change" type="number" name = "convert">
+<div id = "total"></div>
 
 <script src = "main.js"></script>
 </body>
