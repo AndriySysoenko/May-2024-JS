@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="923779f8-dd76-4c12-b6d0-b63443fe8aad" name="Changes" comment="creat fist part hw10 hw10.html">
-      <change afterPath="$PROJECT_DIR$/HW_10/hw10.1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW_10/main10.1.js" afterDir="false" />
+    <list default="true" id="923779f8-dd76-4c12-b6d0-b63443fe8aad" name="Changes" comment="creat part hw10 hw10.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW_10/hw10.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW_10/hw10.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW_10/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW_10/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +83,8 @@
       <updated>1724770801602</updated>
       <workItem from="1724771801037" duration="6550000" />
       <workItem from="1724870159745" duration="9914000" />
-      <workItem from="1724944416482" duration="9239000" />
+      <workItem from="1724944416482" duration="10000000" />
+      <workItem from="1725031090385" duration="4100000" />
     </task>
     <task id="LOCAL-00001" summary="finished task hw9 main.js">
       <option name="closed" value="true" />
@@ -104,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724880425015</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="creat part hw10 hw10.html">
+      <option name="closed" value="true" />
+      <created>1724960957023</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724960957024</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +119,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finished task hw9 main.js" />
     <MESSAGE value="creat fist part hw10 hw10.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="creat fist part hw10 hw10.html" />
+    <MESSAGE value="creat part hw10 hw10.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="creat part hw10 hw10.html" />
   </component>
 </project>
