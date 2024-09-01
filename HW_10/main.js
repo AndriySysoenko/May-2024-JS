@@ -20,6 +20,12 @@ formAged.addEventListener('submit', function (event) {
     }
 })
 
+document.addEventListener('DOMContentLoaded', function() {
+    formAged.reset();
+});
+
+//__________________При натисканні на кнопку зчитати данні з полів, та вивести об'єкт в документ.____________________//
+
 let allInfo = document.forms.allInfo;
 
 allInfo.addEventListener('submit', function (event) {
@@ -32,9 +38,13 @@ allInfo.addEventListener('submit', function (event) {
 
         let msgInfo = document.createElement('p');
         msgInfo.innerText = personalInfo.nameInfo + ' ' + personalInfo.surnameInfo + ' ' + personalInfo.ageInfo;
-        document.body.appendChild(msgInfo);
+        document.body.insertBefore(msgInfo, countReload);
 
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    allInfo.reset();
+});
 
 //____________________________написати код, який при кожному перезавантажені сторінки буде додавати до неї +1____________________//
 let counterLoad = +localStorage.getItem('counter');
@@ -74,3 +84,63 @@ let arrThree = [
     {id:2, name:'viktoria', surname:'gukova', email:'tdgndthdv@gmail.com', phone:'+380956164589'}
 ];
 
+localStorage.setItem('arrOne', JSON.stringify(arrOne));
+localStorage.setItem('arrTwo', JSON.stringify(arrTwo));
+localStorage.setItem('arrThree', JSON.stringify(arrThree));
+
+
+function addObject (arrName, object) {
+    let changeArr = JSON.parse(localStorage.getItem(arrName));
+
+    changeArr.push(object)
+    return localStorage.setItem(arrName, JSON.stringify(changeArr));
+}
+
+addObject('arrOne', {id:7, name:'nika', surname:'kuzina', email:'svrsgsss@gmail.com', phone:'+380962534416'});
+addObject('arrTwo', {});
+addObject('arrThree', {id:8, name:'mila', surname:'phurd', email:'vefvefgertr@gmail.com', phone:'+380958908090'});
+
+//___Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк._____//
+let tableData = document.forms['table'];
+let creatTable = document.createElement('table');
+
+tableData.addEventListener('submit', function (event) {
+    creatTable.innerText = '';
+    event.preventDefault();
+    let rowData = +tableData.row.value;
+    let columnData = +tableData.column.value;
+    let infoData = tableData.info.value;
+
+
+for (let i = 0; i < rowData; i++) {
+    let row = document.createElement('tr');
+        for (let j = 0; j < columnData; j++) {
+            let column = document.createElement('td');
+            column.innerText = infoData;
+            row.appendChild(column);
+            column.style.border = '1px solid black';
+            column.style.padding = '5px';
+        }
+    creatTable.appendChild(row)
+}
+    document.body.insertBefore(creatTable, price);
+    creatTable.style.border = '2px solid black';
+})
+
+document.addEventListener('DOMContentLoaded', function() {
+    tableData.reset();
+});
+
+//___________________при перезавантаженні сторінки до значаення додається по 10грн, але !!!______________________//
+let standardTime = +localStorage.getItem('lastVisitTime') || 0;
+
+let counterPrice = +localStorage.getItem('price') || 90;
+let timeLoad = new Date().getTime();
+    if(timeLoad - standardTime > 10000){
+        counterPrice += 10;
+        localStorage.setItem('lastVisitTime', JSON.stringify(timeLoad));
+    }
+localStorage.setItem('price', counterPrice)
+
+let blockPrice = document.getElementsByTagName('p')[0];
+blockPrice.innerText = counterPrice + 'грн';

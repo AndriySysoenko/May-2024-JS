@@ -29,11 +29,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            background: chocolate;
         }
         #total{
             width: 200px;
             height: 30px;
             background: none;
+        }
+
+        #price{
+            background: aqua;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
     </style>
@@ -60,6 +69,17 @@
 
 <input id = "change" type="number" name = "convert">
 <div id = "total"></div>
+
+<form name="table">
+    <input type="number" name="row" placeholder="Number of rows" min="0">
+    <input type="number" name="column" placeholder="Number of columns" min="0">
+    <input type="text" name="info" placeholder="Enter cell contents">
+    <button>confirm</button>
+</form>
+
+<div id = "price">
+    <p></p>
+</div>
 
 <script src = "main.js"></script>
 </body>
